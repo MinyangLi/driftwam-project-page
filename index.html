@@ -4,66 +4,71 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="DriftWAM: Faster World-Action Models via Action-Aware Video Drifting. Read the paper and download the RoboTwin 2.0 model.">
-  <meta name="theme-color" content="#135f5a">
+  <meta name="theme-color" content="#faf8f4">
   <meta property="og:title" content="DriftWAM">
   <meta property="og:description" content="Faster World-Action Models via Action-Aware Video Drifting. Paper, model, and research overview.">
   <meta property="og:type" content="website">
   <title>DriftWAM · Action-Aware Video Drifting</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="./style.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="nav-shell">
-      <a class="wordmark" href="#main" aria-label="DriftWAM home">Drift<span>WAM</span><span class="wordmark-period">.</span></a>
+    <div class="page-width nav-shell">
+      <a class="wordmark" href="#main" aria-label="DriftWAM home">Drift<i>WAM</i></a>
       <nav aria-label="Main navigation">
         <a href="#abstract">Abstract</a>
         <a href="#method">Method</a>
         <a href="#results">Results</a>
+        <a class="nav-paper" href="https://arxiv.org/abs/2611.33797" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
       </nav>
-      <a class="nav-paper" href="https://arxiv.org/abs/2611.33797" target="_blank" rel="noopener noreferrer">Read paper</a>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero page-width" aria-labelledby="paper-title">
-      <h1 id="paper-title"><span class="project-name">Drift<span>WAM</span></span><span class="paper-subtitle">Faster World-Action Models<br class="desktop-break"> via Action-Aware Video Drifting</span></h1>
-      <div class="authors" aria-label="Authors">
-        <span>Minyang Li<sup>1</sup></span>
-        <span>Siyu Xu<sup>2</sup></span>
-        <span>Yunke Wang<sup>2</sup></span>
-        <span>Ying-Cong Chen<sup>1,3</sup></span>
-        <span>Chang Xu<sup>2</sup></span>
-        <span>Daochang Liu<sup>4,†</sup></span>
-      </div>
-      <div class="affiliations">
-        <span><sup>1</sup> The Hong Kong University of Science and Technology (Guangzhou)</span>
-        <span><sup>2</sup> The University of Sydney</span>
-        <span><sup>3</sup> The Hong Kong University of Science and Technology</span>
-        <span><sup>4</sup> The University of Western Australia</span>
-      </div>
-      <p class="correspondence">† Corresponding author</p>
-      <div class="resource-links">
-        <a class="button button-primary" href="https://arxiv.org/abs/2611.33797" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v5h4M9 12h6M9 16h6"/></svg>
-          arXiv Paper
-        </a>
-        <a class="button button-secondary" href="https://huggingface.co/wkrfugs/DriftWAM" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🤗</span> Hugging Face Model</a>
+  <main id="main" class="page-width">
+    <section class="hero" aria-labelledby="paper-title">
+      <h1 id="paper-title"><span class="project-name">Drift<i>WAM</i></span><span class="paper-subtitle">Faster World-Action Models<br class="desktop-break"> via Action-Aware Video Drifting</span></h1>
+      <div class="hero-meta">
+        <div class="authors" aria-label="Authors">
+          <span>Minyang Li<sup>1</sup></span>
+          <span>Siyu Xu<sup>2</sup></span>
+          <span>Yunke Wang<sup>2</sup></span>
+          <span>Ying-Cong Chen<sup>1,3</sup></span>
+          <span>Chang Xu<sup>2</sup></span>
+          <span>Daochang Liu<sup>4,†</sup></span>
+        </div>
+        <div class="affiliations">
+          <span><sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)</span>
+          <span><sup>2</sup>The University of Sydney</span>
+          <span><sup>3</sup>The Hong Kong University of Science and Technology</span>
+          <span><sup>4</sup>The University of Western Australia</span>
+        </div>
+        <p class="correspondence">† Corresponding author</p>
+        <div class="resource-links">
+          <a class="button button-primary" href="https://arxiv.org/abs/2611.33797" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v5h4M9 12h6M9 16h6"/></svg>
+            arXiv Paper
+          </a>
+          <a class="button button-secondary" href="https://huggingface.co/wkrfugs/DriftWAM" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🤗</span> Hugging Face Model</a>
+        </div>
       </div>
     </section>
 
-    <section id="abstract" class="abstract-section section-band section-anchor" aria-labelledby="abstract-title">
-      <div class="reading-width">
-        <h2 id="abstract-title" class="section-title">Abstract</h2>
+    <section id="abstract" class="section" aria-labelledby="abstract-title">
+      <div class="section-label"><h2 id="abstract-title">Abstract</h2><span aria-hidden="true">01</span></div>
+      <div class="prose">
         <p>World-action models (WAMs) unify future video prediction and action generation for robotic control, but their reliance on iterative denoising incurs substantial inference costs. Distilling these models into few-step generators offers a promising route to efficient deployment, yet maintaining task performance under aggressive step reduction remains challenging. Existing methods rely on point-wise trajectory consistency distillation, which pursues high visual fidelity while leaving downstream action information unexploited in optimizing video generation, and also lacks explicit distribution-level alignment.</p>
         <p>To address this, we propose <strong>DriftWAM</strong>, a few-step WAM distillation framework that incorporates the actions induced by predicted videos into video learning. Specifically, DriftWAM integrates <em>action-aware video drifting</em>, which performs video distribution matching through a joint visual–action similarity kernel to steer sample evolution under the guidance of these induced actions, with <em>action-guided video regularization</em>, which leverages the compatible teacher–student matches identified by the joint kernel to backpropagate action-level gradients directly into the video generator. Evaluations on the RoboTwin 2.0 and LIBERO benchmarks, as well as in real-world robotic manipulation tasks, show that DriftWAM consistently outperforms prior consistency distillation methods across few-step settings at the same inference speed.</p>
       </div>
     </section>
 
-    <section id="method" class="method-section page-width section-anchor" aria-labelledby="method-title">
-      <h2 id="method-title" class="section-title">Method</h2>
-      <figure class="paper-figure method-figure">
+    <section id="method" class="section section-wide" aria-labelledby="method-title">
+      <div class="section-label"><h2 id="method-title">Method</h2><span aria-hidden="true">02</span></div>
+      <figure class="paper-figure">
         <div class="figure-scroll" aria-label="DriftWAM training overview">
           <a href="./assets/method.webp" target="_blank" rel="noopener" aria-label="Open the method figure at full size"><img src="./assets/method.webp" width="2400" height="954" alt="Training overview: a teacher bank and student videos feed a frozen teacher, which measures video features and action responses. Their joint kernel determines drifting targets and matched pairs for action-guided regularization." loading="lazy"></a>
         </div>
@@ -71,26 +76,34 @@
       </figure>
     </section>
 
-    <section id="results" class="results-section section-band section-anchor" aria-labelledby="results-title">
-      <div class="page-width">
-        <h2 id="results-title" class="section-title">RoboTwin 2.0 Results</h2>
-          <div class="result-panel robotwin-results">
-            <div class="table-heading"><span>Average success rates (%) across 50 tasks, Clean + Randomized</span></div>
-            <div class="table-scroll"><table>
-              <caption class="sr-only">RoboTwin 2.0 average success rates and inference speedup</caption>
-              <thead><tr><th scope="col">Method</th><th scope="col">Steps <span class="th-detail">video / action</span></th><th scope="col">Success</th><th scope="col">Speedup</th></tr></thead>
-              <tbody>
-                <tr><th scope="row">LingBot-VA <span class="table-muted">teacher</span></th><td>25 / 50</td><td>90.77%</td><td>1.00×</td></tr>
-                <tr class="budget-start"><th scope="row">Flash-WAM</th><td>1 / 2</td><td>84.76%</td><td>17.15×</td></tr>
-                <tr class="ours"><th scope="row">DriftWAM <span>ours</span></th><td>1 / 2</td><td>86.83%</td><td>17.15×</td></tr>
-                <tr class="budget-start"><th scope="row">Flash-WAM</th><td>1 / 1</td><td>76.21%</td><td>21.46×</td></tr>
-                <tr class="ours"><th scope="row">DriftWAM <span>ours</span></th><td>1 / 1</td><td>82.19%</td><td>21.46×</td></tr>
-              </tbody>
-            </table></div>
-          </div>
-        <p class="table-note robotwin-note">Speedup is measured on one NVIDIA RTX 4090 relative to the 25-video / 50-action-step teacher.</p>
+    <section id="results" class="section" aria-labelledby="results-title">
+      <div class="section-label"><h2 id="results-title">RoboTwin 2.0 Results</h2><span aria-hidden="true">03</span></div>
+      <div class="results">
+        <p class="table-heading">Average success rates (%) across 50 tasks, Clean + Randomized</p>
+        <div class="table-scroll"><table>
+          <caption class="sr-only">RoboTwin 2.0 average success rates and inference speedup</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">Steps <span class="th-detail">video / action</span></th><th scope="col">Success</th><th scope="col">Speedup</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">LingBot-VA <span class="tag">teacher</span></th><td>25 / 50</td><td>90.77%</td><td>1.00×</td></tr>
+            <tr class="budget-start"><th scope="row">Flash-WAM</th><td>1 / 2</td><td>84.76%</td><td>17.15×</td></tr>
+            <tr class="ours"><th scope="row">DriftWAM <span class="tag">ours</span></th><td>1 / 2</td><td>86.83%</td><td>17.15×</td></tr>
+            <tr class="budget-start"><th scope="row">Flash-WAM</th><td>1 / 1</td><td>76.21%</td><td>21.46×</td></tr>
+            <tr class="ours"><th scope="row">DriftWAM <span class="tag">ours</span></th><td>1 / 1</td><td>82.19%</td><td>21.46×</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">Speedup is measured on one NVIDIA RTX 4090 relative to the 25-video / 50-action-step teacher.</p>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-shell">
+      <a class="wordmark" href="#main">Drift<i>WAM</i></a>
+      <div>
+        <a href="https://arxiv.org/abs/2611.33797" target="_blank" rel="noopener noreferrer">arXiv Paper</a>
+        <a href="https://huggingface.co/wkrfugs/DriftWAM" target="_blank" rel="noopener noreferrer">Hugging Face Model</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
